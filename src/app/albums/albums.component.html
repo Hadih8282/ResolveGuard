@@ -1,0 +1,28 @@
+<div style="display: flex; padding: 2rem; justify-content: space-evenly">
+  <div
+    class="card bg-light mb-3"
+    style="max-width: 13rem"
+    *ngFor="let album of albums"
+  >
+    <a [routerLink]="['/albums', album.id]">
+      <div class="card-header" style="height: 100px; width: 150px; font-size: 15px;">{{ album.name }}</div>
+      <div class="card-body">
+        <img src="{{ album.albumArt }}" style="width: 150px" />
+        <p class="card-text" style="padding: 2rem; text-align: center">
+          {{ album.year }}
+        </p>
+      </div>
+    </a>
+  </div>
+  <div class="card bg-light mb-3" style="max-width: 18rem">
+    <a [routerLink]="['/albums', 6]">
+      <div class="card-header">Bad data</div>
+      <div class="card-body">
+        <img src="/assets/images/un.png" style="width: 100%" />
+        <p class="card-text" style="padding: 2rem; text-align: center">2019</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+

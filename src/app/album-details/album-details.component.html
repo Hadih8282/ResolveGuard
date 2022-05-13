@@ -1,0 +1,13 @@
+<div style="text-align: center; padding: 2rem;">
+    <img src="{{ album.albumArt }}" style="width: 20rem;"/>
+    <div class="container">
+      <div class="row" *ngFor="let song of album.songs" style="padding: 2rem;">
+        <span class="col-md-2">{{ song.trackNumber }}</span>
+        <span class="col-md-8">{{ song.name }}</span>
+        <span class="col-md-2">{{ song.duration }}</span>
+      </div>
+    </div>
+  </div>
+  
+  <p style="padding: 20px;">{{ warnnigMessage }}</p>
+  
